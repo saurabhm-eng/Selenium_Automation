@@ -3,10 +3,14 @@ package Resources;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -57,5 +61,24 @@ public class base {
 
 			
 		}
+	
+	public ArrayList xls(String Url, String sheetname) throws Exception {
+		FileInputStream fis = new FileInputStream(Url);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet(sheetname);
+		int row_num = sheet.getLastRowNum(); // No of rows.
+		int col_num = sheet.getRow(0).getLastCellNum();
+		System.out.println(row_num);
+		System.out.println(col_num);
+		ArrayList datalist = new ArrayList();
+		for (int i = 0; i <= row_num; i++) {
+			for (int j = 0; j < col_num; j++) {
+				Cell cell = sheet.getRow(i).getCell(j);
+				String cellval = cell.getStringCellValue();
+				datalist.add(cellval);
+			}
+		}
+		return datalist;
+	}
 
 }
