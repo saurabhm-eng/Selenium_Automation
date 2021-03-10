@@ -18,6 +18,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class base {
 
 	public WebDriver driver; // Static means another class can’t modify your static object
@@ -27,10 +29,22 @@ public class base {
 
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\smangal\\Java\\src\\main\\java\\Resources\\data.properties");
+				System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("Browser");
-		if (browserName.contains("Chrome")) {
+		
+		if (browserName.contains("Firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		} else if (browserName.contains("Chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else if (browserName.contains("Edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+		
+		/*if (browserName.contains("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.contains("Firefox")) {
@@ -41,7 +55,7 @@ public class base {
 
 			System.setProperty("webdriver.edge.driver", "C:\\MicrosoftEdge\\msedgedriver.exe");
 			driver = new EdgeDriver();
-		}
+		}*/
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		return driver;

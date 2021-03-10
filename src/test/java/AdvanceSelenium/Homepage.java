@@ -30,7 +30,7 @@ public class Homepage extends base {
 
 		driver = initializerDriver();
 
-		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		driver.get("http://qaclickacademy.com/");
 
 		driver.manage().window().maximize();
 
