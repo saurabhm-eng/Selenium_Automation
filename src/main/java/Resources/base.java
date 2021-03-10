@@ -80,5 +80,50 @@ public class base {
 		}
 		return datalist;
 	}
+	
+	public class datadrivenexcel {
+
+		public void getData(String testcaseName){
+				
+		ArrayList<String>a = new ArrayList<String>();
+		FileInputStream fis = new FileInputStream("C:\\Users\\smangal\\Documents\\demotest.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		int sheets = workbook.getNumberOfSheets();
+		for (int i = 0; i<sheets; i++) {
+
+		if (workbook.getSheetName(i).equalsIgnoreCase("test")) {
+
+				XSSFSheet sheet = workbook.getSheetAt(i);
+				Iterator<Row>rows = sheet.iterator();
+				Row firstrow = rows.next();
+				Iterator<Cell>ce = firstrow.cellIterator();
+				intk = 0;
+				intcolumn = 0;
+				while (ce.hasNext()) {
+
+				Cell value = ce.next();
+		if (value.getStringCellValue().equalsIgnoreCase("Testcases")) {
+				column = k;
+				}
+				k++;
+				}
+				System.out.println(column);
+				while (rows.hasNext()) {
+				Row r = rows.next();
+			if (r.getCell(column).getStringCellValue().equalsIgnoreCase(testcaseName)) {
+			Iterator<Cell>cv = r.cellIterator();
+			while (cv.hasNext()) {
+									a.add(cv.next().getStringCellValue());
+								}
+							}
+						}
+					}
+				}
+		return a;
+
+			}
+
+		}
+
 
 }
