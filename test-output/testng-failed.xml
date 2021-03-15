@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<<<<<<< HEAD
   <test verbose="2" name="Default test">
     <classes>
       <class name="AdvanceSelenium.Signup_Script"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
+=======
+  <test thread-count="5" name="Default test(failed)">
+>>>>>>> aa042e4fb4eb3a4489d15fba512bd48c48ba9f70
     <classes>
       <class name="AdvanceSelenium.Signup_Script">
         <methods>
+<<<<<<< HEAD
           <include name="closeBrowser"/>
           <include name="invalid_email"/>
           <include name="startBrowser"/>
+=======
+          <include name="testNew"/>
+          <include name="startBrowser"/>
+          <include name="closeBrowser"/>
+>>>>>>> aa042e4fb4eb3a4489d15fba512bd48c48ba9f70
         </methods>
       </class> <!-- AdvanceSelenium.Signup_Script -->
     </classes>

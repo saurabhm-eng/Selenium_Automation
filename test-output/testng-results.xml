@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
@@ -52,6 +53,25 @@
           </reporter-output>
         </test-method> <!-- invalid_email -->
         <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Signup_Script@34ce8af7]" name="closeBrowser" is-config="true" duration-ms="85" started-at="2021-03-12T18:33:06Z" finished-at="2021-03-12T18:33:06Z">
+=======
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18452" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18452" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:37Z">
+      <class name="AdvanceSelenium.Homepage">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="startBrowser" is-config="true" duration-ms="14627" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="testNew()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="testNew" duration-ms="2939" started-at="2021-03-15T09:12:33Z" finished-at="2021-03-15T09:12:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNew -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="closeBrowser" is-config="true" duration-ms="838" started-at="2021-03-15T09:12:36Z" finished-at="2021-03-15T09:12:37Z">
+>>>>>>> aa042e4fb4eb3a4489d15fba512bd48c48ba9f70
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

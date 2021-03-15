@@ -9,7 +9,6 @@
       <class name="AdvanceSelenium.Homepage">
         <methods>
           <include name="startBrowser"/>
-          <include name="closeBrowser"/>
           <include name="brokenLinks"/>
         </methods>
       </class> <!-- AdvanceSelenium.Homepage -->

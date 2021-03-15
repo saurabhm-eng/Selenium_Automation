@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -54,12 +53,21 @@ public class base {
 		/*
 		 * if (browserName.contains("Chrome")) {
 		 * System.setProperty("webdriver.chrome.driver",
+<<<<<<< HEAD
 		 * "C:\\chromedriver\\chromedriver.exe"); driver = new ChromeDriver(); }
 		 * else if (browserName.contains("Firefox")) {
 		 * 
 		 * System.setProperty("webdriver.gecko.driver",
 		 * "C:\\geckodriver\\geckodriver.exe"); driver = new FirefoxDriver(); }
 		 * else if (browserName.contains("Edge")) {
+=======
+		 * "C:\\chromedriver\\chromedriver.exe"); driver = new ChromeDriver(); } else if
+		 * (browserName.contains("Firefox")) {
+		 * 
+		 * System.setProperty("webdriver.gecko.driver",
+		 * "C:\\geckodriver\\geckodriver.exe"); driver = new FirefoxDriver(); } else if
+		 * (browserName.contains("Edge")) {
+>>>>>>> aa042e4fb4eb3a4489d15fba512bd48c48ba9f70
 		 * 
 		 * System.setProperty("webdriver.edge.driver",
 		 * "C:\\MicrosoftEdge\\msedgedriver.exe"); driver = new EdgeDriver(); }
