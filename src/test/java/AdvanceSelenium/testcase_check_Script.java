@@ -59,6 +59,69 @@ public class testcase_check_Script extends base {
 			i++;
 		}
 */
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		// String data1 = (String)((JavascriptExecutor)
+		// driver).executeScript(sp.email().getAttribute("requiredattribute "));
+
+		// String data =sp.email().getAttribute("title");
+		//System.out.println(data1);
+
+		// List <WebElement> Validation_list =
+		// sp.error_msg().findElements(By.tagName("li"));
+		// assert_message(Validation_list, expectedmessage);
+		// softAssertion.assertAll();
+
+		/*
+		 * String[] expectedmessage = { "This field is required.",
+		 * "This field is required.", "This field is required.",
+		 * "Please enter valid email id here.", "This field is required.",
+		 * "This field is required.", "This field is required.",
+		 * "This field is required.", "This field is required.",
+		 * "This field is required." };
+		 * element.findElement(log.email_field).sendKeys(Keys.chord(Keys.
+		 * CONTROL, "a"), "vikram");
+		 * element.findElement(log.signup_button).click();
+		 * assertmultivalidate(element, log.validation_err_field,
+		 * expectedmessage);
+		 */		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		driver.quit();
 		//softAssertion.assertAll();
 	}

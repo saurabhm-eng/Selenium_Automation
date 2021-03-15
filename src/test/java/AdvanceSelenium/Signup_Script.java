@@ -43,68 +43,102 @@ public class Signup_Script extends base {
 	}
 
 	// check validation When Form is blank.
-	@Test(priority = 2, description = "All field with blank data", enabled=false)
+	@Test(priority = 2, description = "All field with blank data", enabled = false)
 	public void Blank_data() throws Exception {
 
 		String[] expectedmessage = { "Name is required", "Email is required", "Password is required",
-		"You must agree to the Terms of Use and Privacy Policy" };
+				"You must agree to the Terms of Use and Privacy Policy" };
 		Thread.sleep(1000);
 		sp.submit().click();
-		List <WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
+		List<WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
 		assert_message(Validation_list, expectedmessage);
 		softAssertion.assertAll();
 
 	}
 
-	// check validation When Invalid email id
-	@Test(priority = 3, description = "Invalid email_ID")
-	public void invalid_email() throws Exception {
+	// check validation When Already Used email id
+	@Test(priority = 3, description = "Already Used email_ID")
+	public void already_used_email() throws Exception {
 
-		
-	/*	String[] expectedmessage = { "Name is required", "Email is required", "Password is required",
-		"You must agree to the Terms of Use and Privacy Policy" };*/
+		String[] expectedmessage = { "Email is already in use. Please sign in to your account.", "Password is required",
+				"You must agree to the Terms of Use and Privacy Policy" };
+		Thread.sleep(1000);
+		sp.name().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+		sp.name().sendKeys("Amit Agarwal");
+		sp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+		sp.email().sendKeys("test@mailinator.com");
+		sp.submit().click();
+		List<WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
+		assert_message(Validation_list, expectedmessage);
+		softAssertion.assertAll();
+
+	}
+
+	// check validation When blank password
+	@Test(priority = 4, description = "blank password")
+	public void blank_password() throws Exception {
+
+		String[] expectedmessage = { "Password is required", "You must agree to the Terms of Use and Privacy Policy" };
 		Thread.sleep(1000);
 		sp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
-		sp.email().sendKeys("Amit");
+		sp.email().sendKeys("test321@mailinator.com");
 		sp.submit().click();
-		
-		String data1 = (String)((JavascriptExecutor) driver).executeScript(sp.email().getAttribute("requiredattribute "));
-		
-		
-		
-		//String data =sp.email().getAttribute("title");
-		System.out.println(data1);
-		
-//		List <WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
-	//	assert_message(Validation_list, expectedmessage);
-		//softAssertion.assertAll();
-		
-		/*String[] expectedmessage = { "This field is required.", "This field is required.", "This field is required.",
-				"Please enter valid email id here.", "This field is required.", "This field is required.",
-				"This field is required.", "This field is required.", "This field is required.",
-				"This field is required." };
-		element.findElement(log.email_field).sendKeys(Keys.chord(Keys.CONTROL, "a"), "vikram");
-		element.findElement(log.signup_button).click();
-		assertmultivalidate(element, log.validation_err_field, expectedmessage);*/
+		List<WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
+		assert_message(Validation_list, expectedmessage);
+		softAssertion.assertAll();
 
 	}
 
-	// check validation When valid email id and password is blank.
-/*	@Test(priority = 4, description = "valid username and blank password")
-	public void invalid_email() throws Exception {
+	// check validation When invalid password
+	@Test(priority = 5, description = "invalid password")
+	public void invalid_password() throws Exception {
 
-		String expectedmessage = "Invalid email or password.";
-
-		sp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"), "testing");
-
-		Thread.sleep(2000);
-
+		String[] expectedmessage = { "Password confirmation doesn't match Password",
+				"Password is too short (minimum is 6 characters)",
+				"You must agree to the Terms of Use and Privacy Policy" };
+		Thread.sleep(1000);
+		sp.password().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+		sp.password().sendKeys("123");
 		sp.submit().click();
-
-		Assert.assertEquals(sp.error_msg().getText(), expectedmessage);
+		List<WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
+		assert_message(Validation_list, expectedmessage);
+		softAssertion.assertAll();
 
 	}
-*/
+
+	// check validation When Blank Confirm Password
+	@Test(priority = 6, description = "Blank Confirm Password")
+	public void blank_cnf_password() throws Exception {
+
+		String[] expectedmessage = { "Password confirmation doesn't match Password",
+				"You must agree to the Terms of Use and Privacy Policy" };
+		Thread.sleep(1000);
+		sp.password().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+		sp.password().sendKeys("123123");
+		sp.submit().click();
+		List<WebElement> Validation_list = sp.error_msg().findElements(By.tagName("li"));
+		assert_message(Validation_list, expectedmessage);
+		softAssertion.assertAll();
+
+	}
+	
+	// check validation When Valid Data
+		@Test(priority = 7, description = "Valid Data")
+		public void Valid_data() throws Exception {
+
+			String expectedmessage =  "https://courses.rahulshettyacademy.com/" ;
+			Thread.sleep(1000);
+			sp.password().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+			sp.password().sendKeys("123123");
+			sp.cnf_password().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+			sp.cnf_password().sendKeys("123123");
+			sp.t_c().click();
+			sp.submit().click();
+			
+			String url =driver.getCurrentUrl();
+			Assert.assertEquals(url, expectedmessage);
+		}
+		
 	@AfterTest
 
 	public void closeBrowser() {
