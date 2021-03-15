@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13130" started-at="2021-03-10T09:25:49Z" finished-at="2021-03-10T09:26:03Z">
+  <suite name="Default suite" duration-ms="12919" started-at="2021-03-12T13:02:53Z" finished-at="2021-03-12T13:03:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13130" started-at="2021-03-10T09:25:49Z" finished-at="2021-03-10T09:26:03Z">
-      <class name="AdvanceSelenium.Homepage">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:AdvanceSelenium.Homepage@43a25848]" name="startBrowser" is-config="true" duration-ms="12144" started-at="2021-03-10T14:55:49Z" finished-at="2021-03-10T14:56:02Z">
+    <test name="Default test" duration-ms="12919" started-at="2021-03-12T13:02:53Z" finished-at="2021-03-12T13:03:06Z">
+      <class name="AdvanceSelenium.Signup_Script">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:AdvanceSelenium.Signup_Script@34ce8af7]" name="startBrowser" is-config="true" duration-ms="6919" started-at="2021-03-12T18:32:53Z" finished-at="2021-03-12T18:33:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="FAIL" signature="brokenLinks()[pri:0, instance:AdvanceSelenium.Homepage@43a25848]" name="brokenLinks" duration-ms="58" started-at="2021-03-10T14:56:02Z" finished-at="2021-03-10T14:56:02Z">
-          <exception class="java.net.MalformedURLException">
-            <message>
-              <![CDATA[unknown protocol: tel]]>
-            </message>
+        <test-method status="PASS" signature="open_login_page()[pri:1, instance:AdvanceSelenium.Signup_Script@34ce8af7]" name="open_login_page" duration-ms="4643" started-at="2021-03-12T18:33:00Z" description="Open Registration Page" finished-at="2021-03-12T18:33:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open_login_page -->
+        <test-method status="FAIL" signature="invalid_email()[pri:3, instance:AdvanceSelenium.Signup_Script@34ce8af7]" name="invalid_email" duration-ms="1260" started-at="2021-03-12T18:33:05Z" description="Invalid email_ID" finished-at="2021-03-12T18:33:06Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.net.MalformedURLException: unknown protocol: tel
-	at java.net.URL.<init>(Unknown Source)
-	at java.net.URL.<init>(Unknown Source)
-	at java.net.URL.<init>(Unknown Source)
-	at AdvanceSelenium.Homepage.brokenLinks(Homepage.java:83)
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:482)
+	at AdvanceSelenium.Signup_Script.invalid_email(Signup_Script.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,15 +47,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.net.MalformedURLException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- brokenLinks -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Homepage@43a25848]" name="closeBrowser" is-config="true" duration-ms="916" started-at="2021-03-10T14:56:02Z" finished-at="2021-03-10T14:56:03Z">
+        </test-method> <!-- invalid_email -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Signup_Script@34ce8af7]" name="closeBrowser" is-config="true" duration-ms="85" started-at="2021-03-12T18:33:06Z" finished-at="2021-03-12T18:33:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- AdvanceSelenium.Homepage -->
+      </class> <!-- AdvanceSelenium.Signup_Script -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

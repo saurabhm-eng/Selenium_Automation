@@ -55,7 +55,8 @@ public class Login_Script extends base {
 			
 			String expectedmessage = "Invalid email or password.";
 			
-			lp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"),"testing@mailinator.com");
+			lp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+			lp.email().sendKeys("testing@mailinator.com");
 			
 			Thread.sleep(2000);
 			
@@ -71,7 +72,8 @@ public class Login_Script extends base {
 				
 				String expectedmessage = "Invalid email or password.";
 				
-				lp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"),"testing");
+				lp.email().sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+				lp.email().sendKeys("testing");
 				
 				Thread.sleep(2000);
 				

@@ -79,6 +79,8 @@ public class Homepage extends base {
 		
 		{
 			String url = link.getAttribute("href");
+			if(url.contains("tel:") ||  url.contains("mailto:") || url.contains("javascript"))
+			{continue;}
 			System.out.println(url);
 			HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
 			conn.setRequestMethod("HEAD");
