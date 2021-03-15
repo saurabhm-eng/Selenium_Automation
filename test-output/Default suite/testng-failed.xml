@@ -5,9 +5,9 @@
     <classes>
       <class name="AdvanceSelenium.Homepage">
         <methods>
+          <include name="testNew"/>
           <include name="startBrowser"/>
           <include name="closeBrowser"/>
-          <include name="brokenLinks"/>
         </methods>
       </class> <!-- AdvanceSelenium.Homepage -->
     </classes>

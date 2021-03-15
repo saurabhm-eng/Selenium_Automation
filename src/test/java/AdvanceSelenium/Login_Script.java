@@ -15,7 +15,7 @@ import pageObjects.Loginpageobject;
 
 public class Login_Script extends base {
 	
-	Loginpageobject lp = new Loginpageobject(null);	
+	Loginpageobject lp;	
 	
 	@BeforeTest
 

@@ -1,59 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8119" started-at="2021-03-02T13:43:18Z" finished-at="2021-03-02T13:43:26Z">
+  <suite name="Default suite" duration-ms="18452" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8119" started-at="2021-03-02T13:43:18Z" finished-at="2021-03-02T13:43:26Z">
+    <test name="Default test" duration-ms="18452" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:37Z">
       <class name="AdvanceSelenium.Homepage">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:AdvanceSelenium.Homepage@4b9e13df]" name="startBrowser" is-config="true" duration-ms="6555" started-at="2021-03-02T13:43:18Z" finished-at="2021-03-02T13:43:25Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="startBrowser" is-config="true" duration-ms="14627" started-at="2021-03-15T09:12:18Z" finished-at="2021-03-15T09:12:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="FAIL" signature="brokenLinks()[pri:0, instance:AdvanceSelenium.Homepage@4b9e13df]" name="brokenLinks" duration-ms="747" started-at="2021-03-02T13:43:25Z" finished-at="2021-03-02T13:43:25Z">
-          <exception class="java.net.MalformedURLException">
-            <message>
-              <![CDATA[no protocol: ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.net.MalformedURLException: no protocol: 
-at java.net.URL.<init>(Unknown Source)
-at java.net.URL.<init>(Unknown Source)
-at java.net.URL.<init>(Unknown Source)
-at AdvanceSelenium.Homepage.brokenLinks(Homepage.java:83)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.net.MalformedURLException -->
+        <test-method status="PASS" signature="testNew()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="testNew" duration-ms="2939" started-at="2021-03-15T09:12:33Z" finished-at="2021-03-15T09:12:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- brokenLinks -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Homepage@4b9e13df]" name="closeBrowser" is-config="true" duration-ms="802" started-at="2021-03-02T13:43:26Z" finished-at="2021-03-02T13:43:26Z">
+        </test-method> <!-- testNew -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:AdvanceSelenium.Homepage@623a8092]" name="closeBrowser" is-config="true" duration-ms="838" started-at="2021-03-15T09:12:36Z" finished-at="2021-03-15T09:12:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
